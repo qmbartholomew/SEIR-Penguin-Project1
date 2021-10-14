@@ -3,6 +3,8 @@
 
 ## Introduction
 
+This is a two player trivia game based around fun NBA and NBA history facts.
+
 ## Technologies Used
 
 - HTML
@@ -12,14 +14,6 @@
 
 ## Challenges
 
-#### I had trouble with xxxx
+#### Troubles with CSS
 
-```js
-console.log("hello")
-```
-
-It was a giving me a problem... when it was fixed it looked like this:
-
-```js
-console.log("goodbye")
-````
+I struggled to find a design concept that I was truly happy with. I used styling that I found with a few google searches to influence my project. 
