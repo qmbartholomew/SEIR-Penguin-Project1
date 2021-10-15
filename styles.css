@@ -14,6 +14,18 @@ body {
     justify-content: center;
     background-color: rgb(198, 255, 255);
 }
+.outro {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
 h1 {
     text-align: center;
     color: #16E92E;
@@ -67,15 +79,9 @@ h1 {
     margin: 0 0 10px 40px;
     text-align: center;
 }
-
-.third {
-    border-color: #3498db;
-    color: #fff;
-    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
-    transition: all 150ms ease-in-out;
-}
-.third:hover {
-    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+.begin { 
+    margin: 10px auto;
+    width: 20%;
 }
   
 

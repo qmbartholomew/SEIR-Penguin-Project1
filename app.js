@@ -20,6 +20,7 @@ const $p2score = $('#player2 h4')
 /*          FUNCTIONS           */
 
 const chooseAnswer = (event, question) => {
+    scoreCheck()
     if(event.target.innerText === question.answer) {
         if(state.which) {
             state.player1++
@@ -32,6 +33,20 @@ const chooseAnswer = (event, question) => {
     } else {
         setBoard(questions)
         state.which = !state.which
+    }
+}
+
+
+// Function to check score for win/loss scenarios
+const scoreCheck = () => {
+    // Winning Scenario
+    if($p1score[0].innerText >= 10) {
+        $('.outro').append($('<h2>')).text('You won! Press F5 or refresh to play again!')
+        $('.outro').css('display', 'flex')
+    // Losing Scenario
+    } else if ($p2score[0].innerText >= 10) {
+        $('.outro').append($('<h2>')).text('You lost. Press F5 or refresh to play again.')
+        $('.outro').css('display', 'flex')
     }
 }
 
@@ -53,7 +68,7 @@ const setBoard = (q) => {
 
     $('li').off()
     $('li').on('click', (event) => {
-        chooseAnswer(event, randomQuestion) // REVIEW FOR UNDERSTANDING
+        chooseAnswer(event, randomQuestion)
     })
 }
 
@@ -64,8 +79,6 @@ $.ajax(API)
     questions = data.items.map(q => q.fields)
     setBoard(questions)
 })
-0
-/*          ADDITIONAL GAME LOGIC/EVENT LISTENERS           */
 
 // Remove intro overlay when start button clicked -- Begin the game.
 $('.begin').on('click', () => {
